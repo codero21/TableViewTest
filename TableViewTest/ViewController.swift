@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
     var continents: Array = ["Asia", "North America",
@@ -31,7 +31,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+ 
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return continents.count
+//    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return continents.count
+    }
+  
+    
+    
+    
 }
 
