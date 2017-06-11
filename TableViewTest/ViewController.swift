@@ -58,6 +58,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return continents[section]
     }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "proyotypeCell1") as! UITableViewCell
+        
+        
+        
+        if indexPath.section == 0 {
+            cell.textLabel?.text = citiesInAsia[indexPath.row]
+        } else if indexPath.section == 1 {
+            cell.textLabel?.text = citiesInNorthAmerica[indexPath.row]
+        } else if indexPath.section == 2 {
+            cell.textLabel?.text = citiesInEurope[indexPath.row]
+        } else if indexPath.section == 3 {
+            cell.textLabel?.text = citiesInAustralia[indexPath.row]
+        }
+        
+        return cell
+    }
 }
 
