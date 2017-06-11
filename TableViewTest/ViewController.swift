@@ -9,6 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: Properties
+    var continents: Array = ["Asia", "North America",
+                             "Europe", "Australia"]
+    
+    var citiesInAsia: Array = ["Bangkok", "New Delhi",
+                                       "Singapore", "Tokyo"]
+    
+    var citiesInNorthAmerica: Array = ["San Francisco", "Cupertino"]
+    var citiesInEurope: Array = ["London", "Paris", "Rome", "Athen"]
+    var citiesInAustralia: Array = ["Sydney", "Melbourne", "Cairns"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
