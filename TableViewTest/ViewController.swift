@@ -40,7 +40,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return continents.count
     }
   
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return citiesInAsia.count
+        } else if section == 1 {
+            return citiesInNorthAmerica.count
+        } else if section == 2 {
+            return citiesInEurope.count
+        } else if section == 3 {
+            return citiesInAustralia.count
+        }
+        
+        return 0
+    }
     
     
 }
